@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1> Hello {{ user }} </h1>
+    <p>
+        Welcome to HoneyCell WebServer!
+    </p>
+    <form method="get" action="{{ url_for('logout') }}">
+        <p><button type="submit">Log Out</button></p>
+    </form>
+{% endblock %}

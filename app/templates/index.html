@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>HoneyCell LogIn</h1>
+<form method="post" action="{{ url_for('signup') }}">
+    {% if user_not_exist %}
+    <font size="3" color="red">User not exist!</font>
+    {% endif %}
+    {% if password_wrong %}
+    <font size="3" color="red">password incorrect!</font>
+    {% endif %}
+    {% if logout %}
+    <font size="3" color="blue">You have logout HoneyCell WebServer!</font>
+    {% endif %}
+    <p><label>Username:</label> <input type="text" name="username" required></p>
+    <p><label>Password:</label> <input type="password" name="password" required></p>
+    <p><button type="submit" value="Log In"></button></p>
+</form>
+{% endblock %}
