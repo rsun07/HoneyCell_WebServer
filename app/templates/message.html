@@ -1,10 +1,36 @@
-{% extends "layout.html" %}
-{% block content %}
-    <h1> Hello {{ user }} </h1>
-    <p>
-        Welcome to HoneyCell WebServer!
-    </p>
-    <form method="get" action="{{ url_for('logout') }}">
-        <p><button type="submit">Log Out</button></p>
-    </form>
-{% endblock %}
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="static/css/result.css">
+    <script src="static/js/d3.min.js"></script>
+    <script src="static/js/dimple.v2.1.6.min.js"></script>
+</head>
+
+<body>
+<div id="nav">
+    <div id="logo">
+        <a href="#"><img src="static/img/logo.jpeg" alt="logo"></a>
+    </div>
+    <ul id="navi">
+        <li class="navMenu"><a href="#">HoneyCell</a></li>
+        <li class="navMenu"><a href="{{ url_for('upload')}}">New Task</a></li>
+        <li class="navMenu"><a href="{{ url_for('preprocessing') }}">Preprocessing</a></li>
+        <li class="navMenu"><a href="#">Analytics</a></li>
+        <li class="navMenu"><a href="{{ url_for('visualization') }}">Visualization</a></li>
+        <li class="navMenu"><a href="{{ url_for('logout') }}">Logout</a></li>
+    </ul>
+</div>
+
+<h2 class="log"> Hello {{ user }} </h2>
+
+<h3>
+    Welcome to HoneyCell WebServer!
+</h3>
+<form method="get" action="{{ url_for('logout') }}">
+    <p><button type="submit">Log Out</button></p>
+</form>
+
+</body>
+</html>
+

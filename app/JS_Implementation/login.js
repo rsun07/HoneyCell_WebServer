@@ -1,7 +1,7 @@
 function pasuser(form) {
     if (form.username.value=="xiaomins") {
         if (form.password.value=="123") {
-            location="message.html"
+            window.location="knnresult.html"
         } else {
             alert("Invalid Password")
         }

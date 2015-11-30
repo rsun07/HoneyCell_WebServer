@@ -1,0 +1,13 @@
+Order	Class	Name	Value
+1	Yes	TP Rate	0.381
+2	Yes	FP Rate	0.016
+3	Yes	Precision	0.919
+4	Yes	Recall	0.381
+5	Yes	F-Measure	0.539
+6	Yes	ROC Area	0.754
+1	No	TP Rate	0.984
+2	No	FP Rate	0.619
+3	No	Precision	0.769
+4	No	Recall	0.984
+5	No	F-Measure	0.863
+6	No	ROC Area	0.754

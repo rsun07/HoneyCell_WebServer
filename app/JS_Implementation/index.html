@@ -1,14 +1,32 @@
-<!doctype html>
 <html>
+
     <head>
-        <script src="login.js" type="text/javascript"> </script>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="result.css">
+        <script src="d3.min.js"></script>
+        <script src="dimple.v2.1.6.min.js"></script>
+        <script src="login.js"></script>
     </head>
+
     <body>
-    <h1>HoneyCell LogIn</h1>
-    <form method="post" action="" onsubmit="pasuser(this.form)">
-        <p><label>Username:</label> <input type="text" name="username" required></p>
-        <p><label>Password:</label> <input type="password" name="password" required></p>
-        <p><button type="submit" onclick="pasuser(this.form)">Log In</button></p>
-    </form>
+        <div id="nav">
+        <div id="logo">
+            <a href="#"><img src="img/logo.jpeg" alt="logo"></a>
+        </div>
+        <ul id="navi">
+            <li class="navMenu"><a href="#">HoneyCell</a></li>
+            <li class="navMenu"><a href="#">HoneyComb</a></li>
+            <li class="navMenu"><a href="#">Preprocessing</a></li>
+            <li class="navMenu"><a href="#">Analytics</a></li>
+            <li class="navMenu"><a href="#">Visualization</a></li>
+        </ul>
+        </div>
+
+        <h2 id="log">Please LogIn</h2>
+            <form method="post" action="knnresult.html" onsubmit="pasuser(this.form)">
+                <p><label>Username:</label> <input type="text" name="username" required></p>
+                <p><label>Password:</label> <input type="password" name="password" required></p>
+                <p><button type="submit" onclick="pasuser(this.form)">Log In</button></p>
+            </form>
     </body>
 </html>

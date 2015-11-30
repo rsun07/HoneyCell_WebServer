@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="static/css/result.css">
+    <script src="static/js/d3.min.js"></script>
+    <script src="static/js/dimple.v2.1.6.min.js"></script>
+    <link
+            href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"
+            rel="stylesheet">
+</head>
+
+<body>
+<div id="nav">
+    <div id="logo">
+        <a href="#"><img src="static/img/logo.jpeg" alt="logo"></a>
+    </div>
+    <ul id="navi">
+        <li class="navMenu"><a href="#">HoneyCell</a></li>
+        <li class="navMenu"><a href="{{ url_for('upload') }}">New Task</a></li>
+        <li class="navMenu"><a href="{{ url_for('preprocessing') }}">Pre-processing</a></li>
+        <li class="navMenu"><a href="#">Analytics</a></li>
+        <li class="navMenu"><a href="{{ url_for('visualization') }}">Visualization</a></li>
+        <li class="navMenu"><a href="{{ url_for('logout') }}">Logout</a></li>
+    </ul>
+</div>
+
+<div class="container">
+    <div class="header">
+        <h3 class="text-muted">Uploaded files</h3>
+    </div>
+    <hr/>
+    <div>
+        Please upload your training data and testing data
+        <form action="" method=post enctype=multipart/form-data>
+            <p><input type=file name="file[]" multiple></p>
+            <input type=submit value=Upload>
+        </form>
+    </div>
+    <hr/>
+</div>
+</div>
+</body>
+</html>

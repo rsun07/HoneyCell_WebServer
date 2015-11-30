@@ -1,18 +1,54 @@
-{% extends "layout.html" %}
-{% block content %}
-<h1>HoneyCell LogIn</h1>
-<form method="post" action="{{ url_for('signup') }}">
-    {% if user_not_exist %}
-    <font size="3" color="red">User not exist!</font>
-    {% endif %}
-    {% if password_wrong %}
-    <font size="3" color="red">password incorrect!</font>
-    {% endif %}
-    {% if logout %}
-    <font size="3" color="blue">You have logout HoneyCell WebServer!</font>
-    {% endif %}
-    <p><label>Username:</label> <input type="text" name="username" required></p>
-    <p><label>Password:</label> <input type="password" name="password" required></p>
-    <p><button type="submit" value="Log In"></button></p>
-</form>
-{% endblock %}
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="static/css/result.css">
+        <script src="static/js/d3.min.js"></script>
+        <script src="static/js/dimple.v2.1.6.min.js"></script>
+    </head>
+
+    <body>
+        <div id="nav">
+        <div id="logo">
+            <a href="#"><img src="static/img/logo.jpeg" alt="logo"></a>
+        </div>
+        <ul id="navi">
+            <li class="navMenu"><a href="#">HoneyCell</a></li>
+            <li class="navMenu"><a href="#">HoneyComb</a></li>
+            <li class="navMenu"><a href="#">Preprocessing</a></li>
+            <li class="navMenu"><a href="#">Analytics</a></li>
+            <li class="navMenu"><a href="#">Visualization</a></li>
+        </ul>
+        </div>
+<div id="wrap">
+        <div id="contentwell">
+            
+        <h2 class="log">Please LogIn</h2>
+            <form method="post" action="{{ url_for('signup') }}">
+                {% if user_not_exist %}
+                <font size="3" color="red">User not exist!</font>
+                {% endif %}
+                {% if password_wrong %}
+                <font size="3" color="red">password incorrect!</font>
+                {% endif %}
+                {% if logout %}
+                <font size="3" color="blue">You have logout HoneyCell WebServer!</font>
+                {% endif %}
+                {% if resiter_success %}
+                <font size="3" color="blue">You have successfully registed to HoneyCell WebServer!</font>
+                {% endif %}
+                <div class="logIn">
+                <p><label>Username:</label> <input type="text" name="username" required></p>
+                <p><label>Password:</label> <input type="password" name="password" required></p>
+                <p><button type="submit" value="Log In"> Log In </button>
+                    </div>
+                </p>
+            </form>
+
+            <form method="get" action="{{ url_for('go_register') }}">
+                <p><button id="regiBut" type="submit" value="Register">Register</button></p>
+            </form>
+        </div>
+    </div>
+    </body>
+</html>
